@@ -1,0 +1,136 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: hsl(210, 46%, 95%);
+  text-align: left;
+  font-family: "Barlow Semi Condensed", sans-serif;
+}
+
+h1 {
+  font-size: 15px;
+}
+
+/*-----CLASSES------*/
+
+.container {
+  margin: 2em;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75em;
+}
+
+.profile-picture {
+  border-radius: 50%;
+}
+
+.intro {
+  display: flex;
+  flex-direction: row;
+  gap: 1em;
+}
+
+.daniel {
+  background-color: hsl(263, 55%, 52%);
+  color: hsl(0, 0%, 100%);
+  padding: 1.5em;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.daniel p {
+  color: hsl(0, 0%, 100%, 0.5);
+}
+
+.walters {
+  background-color: hsl(217, 19%, 35%);
+  color: hsl(0, 0%, 100%);
+  padding: 1.5em;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.walters p {
+  color: hsl(0, 0%, 100%, 0.5);
+}
+
+.harmon {
+  background-color: hsl(0, 0%, 100%);
+  color: hsl(219, 29%, 14%);
+  padding: 1.5em;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.harmon p {
+  color: hsl(219, 29%, 14%, 0.5);
+}
+
+.abrams {
+  background-color: hsl(219, 29%, 14%);
+  color: hsl(0, 0%, 100%);
+  padding: 1.5em;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+.abrams p {
+  color: hsl(0, 0%, 100%, 0.5);
+}
+
+.kira {
+  background-color: hsl(0, 0%, 100%);
+  color: hsl(219, 29%, 14%);
+  padding: 1.5em;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.kira p {
+  color: hsl(219, 29%, 14%, 0.5);
+}
+
+
+@media (min-width:1440px) {
+  main{
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+  }
+  .container{
+    display: grid;
+    grid-template-columns:1fr 1fr 1fr 1fr ;
+    grid-template-rows: 1fr 1fr;
+    width: 85%;
+  }
+
+  .daniel{
+    grid-column: span 2;
+  }
+
+  .kira{
+    grid-row: span 2;
+  }
+  .harmon{
+    order: 2;
+  }
+
+  .abrams{
+    order: 3;
+    grid-column: span 2;
+  }
+}
